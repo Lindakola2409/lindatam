@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="nav">
+            <ul class="navItems">
+                <li><a href="Home_Page.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="Passions.html">Passions</a>
+                    <ul>
+                        <li><a href="Passions.html">Baking</a></li>
+                        <li><a href="Passions.html">Coding</a></li>
+                        <li><a href="Passions.html">Sewing</a></li>
+                    </ul>
+                </li>
+                <li><a href="Resume.html">Resume</a></li>
+            </ul>
+            <div class="links">
+                <a href="#"><i class = "fab fa-linkedin"></i></a>
+                <a href="#"><i class = "fab fa-github"></i></a>
+                <a href="#"><i class = "fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div id="content">
+            <div class="wrapper">
+                <div class="cols cols0">
+                    <span class="topline"><p>Hello</p></span>
+                    <h1>I'm A</h1>
+                    <h1><span class="multiText"></span></h1>
+                    <p>Hello my name is Linda and I am the owner of Tam's Treats. I have been baking since I was ten, and although I am not the best by any means I still try my best to make all my food look good and taste good. I am currently a sophomore at University of Southern California majoring in Computer Science. Fight On!!! Besides baking I love to sew, crochet, knit, and play video games (mainly Genshin and Valorant). Check out my instagram: @tams_treatsss</p>
+                    <div class="buttons">
+                        <button  onclick="window.location.href='Resume.html'" class="btn">See My Resume</button>
+                        <button class="btn">Download My Resume</button>
+                    </div>
+                </div>
+                <div class="cols cols1">
+                    <div class="imgbox">
+                        <img src="splash.png" id="splash">
+                        <img src="headshot.png" id="headshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" crossorigin=""></script>
+    <script>
+        var typingEffect = new Typed('.multiText', {
+            strings: ["baker", "student", "Game Developer", "Seamstress","Programmer", "Trojan"],
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500,
+            loop: true
+        });
+    </script>
+</body>
+</html>
