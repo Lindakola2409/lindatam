@@ -30,6 +30,23 @@
             font-size: 1.3em;
             margin: 1px 0;
         }
+       strong{
+            text-decoration: underline;
+       }
+       a{
+            text-decoration: none;
+            color: black;
+       }
+       .GameTitle {
+            font-weight: bold;
+            font-size: 2em;
+            margin: 1px 0;
+       }
+       .GameTitle a:hover{
+            text-decoration: none;
+            margin: 1px 0;
+            background-color: #D4F0F7;
+       }
     </style>
 </head>
 <body>
@@ -58,11 +75,10 @@
                 <h1>Education</h1>
                 <hr>
                 <h2>University of Southern California, Viterbi School of Engineering</h2>
-                <h4>Bachelors in Computer Science Games; Expected graduation year: 2025; GPA: 3.77</h4>
+                <h4>Bachelors in Computer Science Games; Expected graduation year: Dec 2024; GPA: 3.77; Major GPA: 3.925</h4>
                 <h6>Honors: Dean's List</h6>
                 <ul>
-                    <li><p>Courses: Fundamentals in Computations, Data Structures and Object Oriented Design, Principles of Software Development,
-                        Introduction to Algorithm and Theory of Computing, Discrete Methods in Computer Science, Game Design Workshop </p></li>
+                    <li><p>Courses: Introduction to Algorithm and Theory of Computing, Data Structures and Object-Oriented Design, Introduction to Computer Systems, Principles of Software Development, Intermediate Game Design and Production, Applied Python, Video Game Programming, Fundamentals in Computations, Discrete Methods in Computer Science, Linear Algebra and Linear Differential Equations  </p></li>
                 </ul>
             </div>
             <div id="Personal_Projects">
@@ -75,11 +91,142 @@
             <div id="Academic_Projects">
                 <h1>Academic Projects</h1>
                 <hr>
+                <div class="GameTitle"><a href="Pong/Lab01.html" target="_blank">Pong</a></div>
+                <ul>
+                    <li><p>Created a Pong game using C++ and SDL2</p></li>
+                </ul>
+                <div class="GameTitle"><a href="Asteroids/Lab02.html" target="_blank">Asteroids</a></div>
+                <div class="GameTitle"><a href="Frogger/Lab03.html" target="_blank">Frogger</a></div>
+                <div class="GameTitle"><a href="Mario/Lab04.html" target="_blank">Mario</a></div>
+                <div class="GameTitle"><a href="Pac-Man/Lab05.html" target="_blank">Pac-Man</a></div>
+                <h4>Enum, Basic AI, Pathfinding Logic, Time-based State Changes, Randomization, Animation Handling </h4>
+                <ul>
+                    <li><p>Used data structures and object-oriented programming by implementing the GhostAI class with <strong>enums</strong> and member variables to handle the ghost's state and movement. The pathfinding logic allowed the ghosts to select the closest neighboring node towards their target node, while adhering to specific rules. Managed <strong>time-based state changes</strong>, transitioning the ghosts between Scatter and Chase states. <strong>Randomization</strong> was employed for the Frightened state, making the ghost randomly choose nodes at intersections. Integrated a custom AudioSystem class,<strong> caching sounds</strong> for efficient playback and implementing functions for sound control. Prioritization was applied to handle channel limits, allowing more important sounds to override less critical ones.</p></li>
+                </ul>
+                <div class="GameTitle"><a href="Zelda/Lab06.html" target="_blank">Zelda</a></div>
+                <h4>Parsing Data, Tile Mapping Technique, A* Algorithm, Memory Management,  Game State Management, Graphics Rendering</h4>
+                <ul>
+                    <li><p>Implemented the loading of levels with tiled backgrounds and enabled basic movement of the player character, Link. Using the <strong>tile mapping technique</strong>, I created a TiledBGComponent to draw tiles based on <strong>parsing CSV data</strong>. Implemented enemy behavior with pathfinding using the <strong>A* algorithm,</strong> and set up <strong>collision detection</strong> for enemies and obstacles. The game featured sword attacks and animations, with enemies having hit points and the ability to take damage and die. Integrated the <strong>AudioSystem</strong> for managing game sounds and music. Utilized <strong>callbacks </strong> with functions and lambda for custom behavior on damage and death events. Effectively used managed data structures such as vectors for storing components and actors.</p></li>
+                </ul>
+                <!-- <h6>WASD to move, space to attack</h6> -->
+                <div class="GameTitle"><a href="StarFoxTunnel/Lab07.html" target="_blank">Star Fox Tunnel</a></div>
+                <div class="GameTitle"><a href="MarioKart/Lab08.html" target="_blank">Mario Kart</a></div>
+                <h4>Spring camera, Height Map, Cross Product, Euler Integration, Lap and Place tracking</h4>
+                <ul>
+                    <li><p>Implemented a Mario Kart-like game featuring a track, vehicles (karts), and a <strong>spring camera</strong>. Track was represented using a mesh component, and the vehicles had arcade-style physics for acceleration and turning, managed through a custom VehicleMove component. To ensure the karts' height corresponded to the track's elevation, I employed a HeightMap class with <strong>2D grid data</strong> and utilized <strong>cross product</strong> calculations to determine if the the enemy vehicles should turn left or right. <strong>Lap and place tracking</strong> were implemented using checkpoints, and a start timer was added before the race. Included music and sound effects with support for fading in and out.
+                    </p></li>
+                </ul>
+                <div class="GameTitle"><a href="Portal/Lab12.html" target="_blank">Portal</a></div>
+                <!-- <figure id="spinner" style="overflow: visible;">
+                    <div class="spinner"></div>
+                    <center style="margin-top: .5em;"><strong>emscripten</strong></center>
+                </figure>
+                <div class="emscripten" id="status">Downloading...</div>
+                <div class="emscripten">
+                    <progress hidden id="progress" max="100" value="0"></progress>
+                </div>
+                <div class="emscripten_border">
+                    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+                </div>
+                <div class="emscripten">
+                    <input type="checkbox" id="resize">Resize canvas
+                    <input type="checkbox" id="pointerLock" checked>Lock/hide mouse pointer
+                    <input type="button" onclick='Module.requestFullscreen(document.getElementById("pointerLock").checked,document.getElementById("resize").checked)' value="Fullscreen">
+                </div>
+                <script>
+                    var statusElement = document.getElementById("status"),
+                        progressElement = document.getElementById("progress"),
+                        spinnerElement = document.getElementById("spinner"),
+                        Module = {
+                            preRun: [],
+                            postRun: [],
+                            print: function () {
+                                var e = document.getElementById("output");
+                                return e && (e.value = ""), function (t) {
+                                    arguments.length > 1 && (t = Array.prototype.slice.call(arguments).join(" "));
+                                    console.log(t);
+                                    e && (e.value += t + "\n", e.scrollTop = e.scrollHeight);
+                                }
+                            }(),
+                            canvas: function () {
+                                var e = document.getElementById("canvas");
+                                e.addEventListener("webglcontextlost", function (e) {
+                                    alert("WebGL context lost. You will need to reload the page.");
+                                    e.preventDefault();
+                                }, !1);
+                                return e;
+                            }(),
+                            setStatus: function (e) {
+                                if (Module.setStatus.last || (Module.setStatus.last = {
+                                    time: Date.now(),
+                                    text: ""
+                                }), e !== Module.setStatus.last.text) {
+                                    var t = e.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/),
+                                        n = Date.now();
+                                    if (t && n - Module.setStatus.last.time < 30) {
+                                        return;
+                                    }
+                                    Module.setStatus.last.time = n;
+                                    Module.setStatus.last.text = e;
+                                    if (t) {
+                                        e = t[1];
+                                        progressElement.value = 100 * parseInt(t[2]);
+                                        progressElement.max = 100 * parseInt(t[4]);
+                                        progressElement.hidden = !1;
+                                        spinnerElement.hidden = !1;
+                                    } else {
+                                        progressElement.value = null;
+                                        progressElement.max = null;
+                                        progressElement.hidden = !0;
+                                        if (!e) {
+                                            spinnerElement.hidden = !0;
+                                        }
+                                    }
+                                    statusElement.innerHTML = e;
+                                }
+                            },
+                            totalDependencies: 0,
+                            monitorRunDependencies: function (e) {
+                                this.totalDependencies = Math.max(this.totalDependencies, e);
+                                Module.setStatus(e ? "Preparing... (" + (this.totalDependencies - e) + "/" + this.totalDependencies + ")" : "All downloads complete.");
+                            }
+                        };
+                    Module.setStatus("Downloading...");
+                    window.onerror = function () {
+                        Module.setStatus("Exception thrown, see JavaScript console");
+                        spinnerElement.style.display = "none";
+                        Module.setStatus = function (e) {
+                            e && console.error("[post-exception status] " + e);
+                        };
+                    }
+                </script>
+                <script async src="Pong/Lab01.js"></script> -->
                 <h2>Graph Path Finder</h2>
+                <ul>
+                    <li><p>Read from a user-generated graph file and used recursive backtracking to generate and output all possible
+                    paths from one node to another into a file</p></li>
+                </ul>
                 <h2>Hash Table</h2>
+                <ul>
+                    <li><p>Utilized ideas of linear probing, quadratic probing, and open address hashing using the properties of prime numbers
+                        to resize our hash table after the loading factor reaches 0.5 to decrease the chances of a collision</p></li>
+                </ul>
                 <h2>AVL Tree</h2>
+                <ul>
+                    <li><p>Constructed a templated data structure inherited from a balanced binary tree, built from scratch, using ideas of
+                        dynamic allocation and tree rotations that supports insertion, find, and remove</p></li>
+                </ul>
                 <h2>Twitter Engine</h2>
+                <ul>
+                    <li><p>Created a mock Twitter engine using polymorphism, inheritance, list, sets, maps, and FS streams that takes in
+                        a user input or file and outputs a Twitter feed including a list of people’s user followers, their followers, and their tweets in a
+                        chronological order</p></li>
+                </ul>
                 <h2>Huffman Compression</h2>
+                <ul>
+                    <li><p>Built a templated heap from scratch and applied it to compress input files and decompress files into an
+                        output file using the idea of Huffman Compression</p></li>
+                </ul>
 
             </div>
         </div>
