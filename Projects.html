@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1{
+            margin: 1px 0;
+            font-size: 4em;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 2em;
+            margin: 1px 0;
+        }
+        h4{
+            font-weight: normal;
+            font-size: 1.5em;
+            margin: 1px 0;
+        }
+        h6{
+            font-weight: normal;
+            margin: 1px 0;
+            font-size: 1em;
+        }
+        #content p{
+            font-size: 1.3em;
+            margin: 1px 0;
+        }
+       strong{
+            text-decoration: underline;
+       }
+       a{
+            text-decoration: none;
+            color: black;
+       }
+       .GameTitle {
+            font-weight: bold;
+            font-size: 2em;
+            margin: 1px 0;
+       }
+       .GameTitle a:hover{
+            text-decoration: none;
+            margin: 1px 0;
+            background-color: #D4F0F7;
+       }
+       .game_preview{
+            width: 400px;
+            height: auto;
+            margin-left: 10px;
+       }
+       .game_preview_box{
+            width: 420px;
+            height: 550px;
+            border: 2px solid white;
+            padding: 20px;
+            
+       }
+       .game_preview_box:hover{
+            border: 2px solid grey;
+       }
+       .game_preview_content{
+           justify-content: space-evenly;
+           display: flex;
+           margin: 10px;
+           
+       }
+       #Games{
+            margin: 0px auto;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="nav">
+            <ul class="navItems">
+                <li><a href="Home_Page.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Passions.html">Passions</a>
+                    <ul>
+                        <li><a href="Passions.html#Baking">Baking</a></li>
+                        <li><a href="Passions.html#Coding">Coding</a></li>
+                        <li><a href="Passions.html#Sewing">Sewing</a></li>
+                    </ul>
+                </li>
+                <li><a href="Resume.html">Resume</a></li>
+            </ul>
+            <div class="links">
+                <a href="#"><i class = "fab fa-linkedin"></i></a>
+                <a href="#"><i class = "fab fa-github"></i></a>
+                <a href="#"><i class = "fab fa-instagram"></i></a>
+            </div>
+        </div>
+            <div id="Games">
+                <h1>Games Made with C++</h1>
+                <h4>Click on the game to play!</h4>
+                <hr>
+                <div class="game_preview_content">
+                    <!-- Mario -->
+                    <a href="Mario/Lab04.html" target="_blank">
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Mario.png" alt="Mario">
+                        <div class="GameTitle">Mario</div>
+                        <ul>
+                            <li>Loaded and displayed game levels from text files</li>
+                            <li>Implemented <strong>scroll camera</strong> that centered player and controlled camera movement while handling restrictions on camera movement and player boundaries.</li>
+                            <li>Utilized acceleration and velocity for <strong>gravity simulation and jump mechanics</strong></li>
+                            <li>Enemy AI (Goomba) has spawner actors to manage <strong>dynamic enemy spawning</strong> and has <strong>distance-based spawning</strong> logic</li>
+                        </ul>
+                    </div> 
+                 </a> 
+                    <!-- Mario Kart -->
+                    <a href="MarioKart/Lab08.html" target="_blank">
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Mario_Kart.png" alt="Mario_Kart">
+                        <div class="GameTitle">Mario Kart</div>
+                        <ul>
+                            <li>Implemented <strong>spring camera</strong> for a smoother transition</li>
+                            <li>Employed a <strong>HeightMap</strong> class with 2D grid data to represent track elvation</li>
+                            <li>Utilized <strong>cross product</strong> calculations to determine if the the enemy vehicle AI should turn left or right</li>
+                            <li>Lap and place tracking were implemented using <strong>checkpoints</strong> by reading in a csv and checking if cars pass the checkpoint positions </li>
+                            <li>Included music and sound effects with support for <strong>fading in and out</strong></li>
+                        </ul>
+                    </div>  
+                    </a>
+                    <!-- Zelda -->
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Zelda.png" alt="Zelda">
+                        <div class="GameTitle"><a href="Zelda/Lab06.html" target="_blank">Zelda</a></div>
+                        <ul>
+                            <li>Loading of levels with tiled backgrounds using <strong>tile mapping technique</strong></li>
+                            <li>Implemented enemy behavior with pathfinding using the <strong>A* algorithm</strong></li>
+                            <li>Utilized <strong>callbacks</strong> with functions and lambda for custom behavior on damage and death events</li>
+                            <li><strong>Collision detection </strong>for enemies and obstacles</li>
+                            <li><strong>AudioSystem</strong> for managing game sounds and music</li>
+                        </ul>
+                    </div>  
+                </div>
+                <div class="game_preview_content">
+                    <div class="game_preview_box"> 
+                        <img class="game_preview" src="game_imgs/Pong.png" alt="Pong">
+                        <div class="GameTitle"><a href="Pong/Lab01.html" target="_blank">Pong</a></div>
+                        <ul>
+                            <li><p>Created a Pong game using C++ and SDL2</p></li>
+                        </ul>
+                    </div>
+                
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Asteroids.png" alt="Asteroids">
+                        <div class="GameTitle"><a href="Asteroids/Lab02.html" target="_blank">Asteroids</a></div>
+                        <ul>
+                            <li><p>Retro</p></li>
+                        </ul>
+                    </div>
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Star_Fox_Tunnel.png" alt="Star_Fox_Tunnel">
+                        <div class="GameTitle"><a href="StarFoxTunnel/Lab07.html" target="_blank">Star Fox Tunnel</a></div>
+                    </div>
+                </div>
+                <div class="game_preview_content">
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Pac-Man.png" alt="Pac">
+                        <div class="GameTitle"><a href="Pac-Man/Lab05.html" target="_blank">Pac-Man</a></div>
+                        <h4>Enum, Basic AI, Pathfinding Logic, Time-based State Changes, Randomization, Animation Handling </h4>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>  
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Portal.png" alt="Portal">
+                        <div class="GameTitle"><a href="Portal/Lab12.html" target="_blank">Portal</a></div>
+                    </div>  
+                    <div class="game_preview_box">
+                        <img class="game_preview" src="game_imgs/Frogger.png" alt="Frogger">
+                        <div class="GameTitle"><a href="Frogger/Lab03.html" target="_blank">Frogger</a></div>
+                    </div>
+                </div>
+            </div>  
+            <div id="Academic_Projects">
+                <h1>Other School Projects</h1>
+                <h2>Graph Path Finder</h2>
+                <ul>
+                    <li><p>Read from a user-generated graph file and used recursive backtracking to generate and output all possible
+                    paths from one node to another into a file</p></li>
+                </ul>
+                <h2>Hash Table</h2>
+                <ul>
+                    <li><p>Utilized ideas of linear probing, quadratic probing, and open address hashing using the properties of prime numbers
+                        to resize our hash table after the loading factor reaches 0.5 to decrease the chances of a collision</p></li>
+                </ul>
+                <h2>AVL Tree</h2>
+                <ul>
+                    <li><p>Constructed a templated data structure inherited from a balanced binary tree, built from scratch, using ideas of
+                        dynamic allocation and tree rotations that supports insertion, find, and remove</p></li>
+                </ul>
+                <h2>Twitter Engine</h2>
+                <ul>
+                    <li><p>Created a mock Twitter engine using polymorphism, inheritance, list, sets, maps, and FS streams that takes in
+                        a user input or file and outputs a Twitter feed including a list of people’s user followers, their followers, and their tweets in a
+                        chronological order</p></li>
+                </ul>
+                <h2>Huffman Compression</h2>
+                <ul>
+                    <li><p>Built a templated heap from scratch and applied it to compress input files and decompress files into an
+                        output file using the idea of Huffman Compression</p></li>
+                </ul>
+
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
