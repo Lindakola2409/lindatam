@@ -58,7 +58,15 @@
             height: 550px;
             border: 2px solid white;
             padding: 20px;
-            
+       }
+       .game_preview_long{
+            width: 420px;
+            height: 650px;
+            border: 2px solid white;
+            padding: 20px;
+       }
+       .game_preview_long:hover{
+            border: 2px solid grey;
        }
        .game_preview_box:hover{
             border: 2px solid grey;
@@ -189,7 +197,7 @@
                 <div class="game_preview_content">
                     <div class="game_preview_box"> 
                         <img class="game_preview" src="game_imgs/Pong.png" alt="Pong">
-                        <div class="GameTitle"><a href="Pong/Lab01.html" target="_blank">Pong</a></div>
+                        <div class="GameTitle"><a href="Pong/Lab01.html" target="_blank">Pong</div>
                         <ul>
                             <li>
                                 Orchestrated a dynamic and responsive <strong>game loop architecture</strong> that handled input processing, game state updates, and output generation.
@@ -205,10 +213,11 @@
                             </li>
                         </ul>
                     </div>
-                
+                    </a>
+                    <a href="Asteroids/Lab02.html" target="_blank">
                     <div class="game_preview_box">
                         <img class="game_preview" src="game_imgs/Asteroids.png" alt="Asteroids">
-                        <div class="GameTitle"><a href="Asteroids/Lab02.html" target="_blank">Asteroids</a></div>
+                        <div class="GameTitle">Asteroids</div>
                         <ul>
                             <li>
                                 Employed <strong>strategic conditional control</strong> to govern diverse game object behaviors.
@@ -223,9 +232,11 @@
                             </li>
                         </ul>
                     </div>
+                    </a>
+                    <a href="StarFoxTunnel/Lab07.html" target="_blank">
                     <div class="game_preview_box">
                         <img class="game_preview" src="game_imgs/Star_Fox_Tunnel.png" alt="Star_Fox_Tunnel">
-                        <div class="GameTitle"><a href="StarFoxTunnel/Lab07.html" target="_blank">Star Fox Tunnel</a></div>
+                        <div class="GameTitle">Star Fox Tunnel</div>
                         <ul>
                             <li>
                                 Created a function that <strong>dynamically generates blocks</strong> as the player progresses through the game and occasionally loads new block configurations </li>
@@ -235,29 +246,44 @@
                                 Designed and implemented a <strong>dynamic game mechanic</strong> allowing shooting a block to trigger a cascading destruction effect among neighboring blocks, utilizing a component-based architecture, recursive algorithms, and dynamic gameplay interactions.</li>
                         </ul>
                     </div>
+                    </a>
                 </div>
                 <div class="game_preview_content">
-                    <div class="game_preview_box">
+                <a href="Pac-Man/Lab05.html" target="_blank">
+                    <div class="game_preview_long">
                         <img class="game_preview" src="game_imgs/Pac-Man.png" alt="Pac">
-                        <div class="GameTitle"><a href="Pac-Man/Lab05.html" target="_blank">Pac-Man</a></div>
-                        <h4>Enum, Basic AI, Pathfinding Logic, Time-based State Changes, Randomization, Animation Handling </h4>
+                        <div class="GameTitle">Pac-Man</div>
                         <ul>
-                            <li></li>
+                            <li> Implemented GhostAI using <strong>enums</strong> and variables for <strong>state handling</strong> and movement</li>
+                            <li> Developed  <strong>pathfinding logic</strong> for ghost movement toward target nodes with specific rules</li>
+                            <li> Managed <strong>time-based state</strong> changes between Scatter and Chase states</li>
+                            <li> Integrated <strong>Audio System</strong> for efficient sound caching and prioritization</li>
                         </ul>
                     </div>  
-                    <div class="game_preview_box">
-                        <img class="game_preview" src="game_imgs/Portal.png" alt="Portal">
-                        <div class="GameTitle"><a href="Portal/Lab12.html" target="_blank">Portal</a></div>
-                    </div>  
-                    <div class="game_preview_box">
-                        <img class="game_preview" src="game_imgs/Frogger.png" alt="Frogger">
-                        <div class="GameTitle"><a href="Frogger/Lab03.html" target="_blank">Frogger</a></div>
-                        <ul>
-                            <li>Loaded levels by parsing in text file inputs</li>
-                            <li>Implemented <strong>leading edge logic </strong>to prevent spam jumping</li>
-                            <li>Utilized <strong>dot product analysis</strong> to detect presence of frogs in front of vehicles, triggering automatic slowing mechanism when applicable.</li>
-                        </ul>
-                    </div>
+                </a>
+                <a href="Portal/Lab12.html" target="_blank">
+                <div class="game_preview_long">
+                    <img class="game_preview" src="game_imgs/Portal.png" alt="Portal">
+                    <div class="GameTitle">Portal</div>
+                    <ul>
+                        <li>Parsed json files and used the information to create <strong> Voice Over Triggers </strong> to play voiceover lines, open doors, and load levels</li>
+                        <li>Implemented <strong>Sentry AI</strong> to search for players and fire lasers</li>
+                        <li>
+                            Implemented <strong>Complex Portal View</strong> functionality by creating a CalcViewMatrix function within Portal, utilizing advanced matrix calculations and vector transformations to create perspective changes based on the player's relative position to the portal</li>
+                    </ul>
+                </div>  
+                </a>
+                <a href="Frogger/Lab03.html" target="_blank">
+                <div class="game_preview_long">
+                    <img class="game_preview" src="game_imgs/Frogger.png" alt="Frogger">
+                    <div class="GameTitle">Frogger</div>
+                    <ul>
+                        <li>Loaded levels by parsing in text file inputs</li>
+                        <li>Implemented <strong>leading edge logic </strong>to prevent spam jumping</li>
+                        <li>Utilized <strong>dot product analysis</strong> to detect presence of frogs in front of vehicles, triggering automatic slowing mechanism when applicable.</li>
+                    </ul>
+                </div>
+                </a>
                 </div>
             </div>  
             <div id="Academic_Projects">
